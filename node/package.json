@@ -1,0 +1,9 @@
+{
+    "name": "nodejs-chat-backend",
+    "version": "1.0.0",
+    "main": "src/index.js",
+    "dependencies": {
+      "express": "^4.17.1",
+      "mongodb": "^3.6.6"
+    }
+  }

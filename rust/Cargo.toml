@@ -1,0 +1,10 @@
+[package]
+name = "rust-chat-backend"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+actix-web = "4.8.0"
+mongodb = "3.0.1"
+serde = { version = "1.0", features = ["derive"] }
+bson = "2.11.0"
