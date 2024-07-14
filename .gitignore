@@ -63,6 +63,25 @@ wheels/
 .installed.cfg
 *.egg
 
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE-specific files (optional, but often helpful)
+.vscode/
+.idea/
+
+# Other common files to ignore
+*.log
+.DS_Store
+
 # Test results and logs
 results/
 *.log

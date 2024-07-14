@@ -1,21 +1,26 @@
-version: '3.8'
 services:
   nodejs-backend:
-    build: ./node
+    build:
+      context: ./node
+      dockerfile: Dockerfile
     ports:
       - "3000:3000"
     depends_on:
       - mongodb
 
   rust-backend:
-    build: ./rust
+    build:
+      context: ./rust
+      dockerfile: Dockerfile
     ports:
       - "3001:3001"
     depends_on:
       - mongodb
 
   go-backend:
-    build: ./go
+    build:
+      context: ./go
+      dockerfile: Dockerfile
     ports:
       - "3002:3002"
     depends_on:
@@ -25,11 +30,11 @@ services:
     image: mongo:latest
     ports:
       - "27017:27017"
-    volumes:
-      - ./database/init-scripts:/docker-entrypoint-initdb.d
 
   test-runner:
-    build: ./tests
+    build:
+      context: ./tests
+      dockerfile: Dockerfile
     volumes:
       - ./tests:/tests
       - ./results:/results
@@ -37,10 +42,3 @@ services:
       - nodejs-backend
       - rust-backend
       - go-backend
-
-  mongodb:
-    image: mongo:latest
-    ports:
-      - "27017:27017"
-    volumes:
-      - ./database/init-scripts:/docker-entrypoint-initdb.d
