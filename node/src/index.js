@@ -33,7 +33,7 @@ app.post("/message", async (req, res) => {
 });
 
 connectToMongo().then(() => {
-  app.listen(port, () => {
+  app.listen(port, "0.0.0.0", () => {
     console.log(`Node.js backend listening at http://localhost:${port}`);
   });
 });
