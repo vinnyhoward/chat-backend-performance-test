@@ -6,14 +6,6 @@ This project compares the performance of chat backend implementations in Node.js
 
 - Docker
 - Docker Compose
-- Make
-
-## Quick Start
-
-1. Build the Docker images:
-2. Run the services:
-3. Run the performance tests:
-4. Clean up:
 
 ## Project Structure
 
@@ -23,8 +15,36 @@ This project compares the performance of chat backend implementations in Node.js
 - `tests/`: Test scripts and configurations
 - `database/`: Database initialization scripts
 - `docker-compose.yml`: Defines our multi-container Docker application
-- `Makefile`: Contains commands for building, running, and testing
+- `results/`: Directory where test results will be stored
 
-## Viewing Results
+## Quick Start
 
-After running the tests, results will be available in the `results/` directory.
+1. Clone the repository:
+
+```
+git clone https://github.com/your-username/chat-backend-performance-test.git
+cd chat-backend-performance-test
+```
+
+2. Build the Docker images:
+
+```
+docker compose build
+```
+
+3. Start the services:
+
+```
+docker compose up -d
+```
+
+4. Run the performance tests:
+
+```
+docker compose run test-runner
+```
+
+5. Clean up:
+```
+docker compose down
+```

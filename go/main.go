@@ -40,5 +40,5 @@ func main() {
 		w.WriteHeader(http.StatusCreated)
 	})
 
-	log.Fatal(http.ListenAndServe(":3002", nil))
+	log.Fatal(http.ListenAndServe("0.0.0.0:3002", nil))
 }
